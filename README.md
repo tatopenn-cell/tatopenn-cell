@@ -6,12 +6,11 @@
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&pause=1000&center=true&vCenter=true&width=900&lines=AI-Driven+Quantum+Researcher;JAX+XLA+Systems+Engineer;Quantum+Chemistry+%26+VQE;AI+Runtime+Robustness;Bio-Computational+Pipelines)](https://git.io/typing-svg)
 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/salvatore-pennacchio-090924413/)
 [![Email](https://img.shields.io/badge/Email-Reach_Out-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:tatopenn@gmail.com)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/tatopenn-cell)
 [![Docs](https://img.shields.io/badge/Docs-Dense--Evolution-00e5ff?style=for-the-badge&logo=materialformkdocs&logoColor=white)](https://tatopenn-cell.github.io/Dense-Evolution/)
 [![PyPI](https://img.shields.io/badge/PyPI-dense--evolution-3775A9?style=for-the-badge&logo=pypi&logoColor=white)](https://pypi.org/project/dense-evolution/)
-
-<!-- LinkedIn badge goes here once the profile URL is confirmed -->
 
 </div>
 
@@ -135,7 +134,7 @@ A paper becomes math, math becomes code, and every claim — quantum, statistica
 
 ## 📬 Get in Touch
 
-Questions, ideas, or a paper worth implementing? [tatopenn@gmail.com](mailto:tatopenn@gmail.com) · [Dense-Evolution issues →](https://github.com/tatopenn-cell/Dense-Evolution/issues)
+Questions, ideas, or a paper worth implementing? [tatopenn@gmail.com](mailto:tatopenn@gmail.com) · [LinkedIn](https://www.linkedin.com/in/salvatore-pennacchio-090924413/) · [Dense-Evolution issues →](https://github.com/tatopenn-cell/Dense-Evolution/issues)
 
 <div align="center">
 <img src="https://user-images.githubusercontent.com/74038190/216656967-625b2a52-e638-4c21-a8ae-180560386f96.gif" width="160" />
