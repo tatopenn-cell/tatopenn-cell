@@ -80,11 +80,9 @@ Adversarial robustness measured directly against the same engine used in product
 
 ### 🧬 Computational Biology
 
-### 🧫 [Dense-Evolution-Molecular-Pipeline](https://github.com/tatopenn-cell/Dense-Evolution-Molecular-Pipeline)
+### 🧫 Dense-Evolution-Molecular-Pipeline
 
-A hybrid bio-quantum pipeline for Chronic Myeloid Leukemia treatment optimization: a JAX-accelerated genetic algorithm — steered by the same Phi_AB predictive-healing coherence signal from `dense_evolution/healing.py` — searches BCR-ABL1 kinase-domain sequence variants, folded via the Meta ESMFold API (with a deterministic alpha-helix fallback), then scored by AutoDock Vina docking against Imatinib. Best measured run: **−9.79 kcal/mol** binding affinity.
-
-**Concepts:** JAX Genetic Optimization • Phi_AB Predictive Healing • ESMFold Structure Prediction • AutoDock Vina Docking
+🚧 **Work in progress — repository currently private.** A hybrid bio-quantum pipeline for Chronic Myeloid Leukemia treatment optimization: a JAX-accelerated genetic algorithm searches BCR-ABL1 kinase-domain sequence variants, folded via the Meta ESMFold API, then scored by a self-contained JAX-native docking engine. Will be featured here once it's ready to share publicly.
 
 ---
 
@@ -102,7 +100,6 @@ A hybrid bio-quantum pipeline for Chronic Myeloid Leukemia treatment optimizatio
 ### 🧬 Bio-Computational
 
 ![RDKit](https://img.shields.io/badge/RDKit-1a1a2e?style=for-the-badge)
-![AutoDock Vina](https://img.shields.io/badge/AutoDock_Vina-2e7d32?style=for-the-badge)
 ![Py3Dmol](https://img.shields.io/badge/Py3Dmol-2e7d32?style=for-the-badge)
 
 ### 📦 Release & Publishing
