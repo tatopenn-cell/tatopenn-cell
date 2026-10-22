@@ -4,209 +4,349 @@
 
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&pause=1000&center=true&vCenter=true&width=900&lines=Software+Engineer+%7C+Scientific+Computing;JAX+XLA+Systems+Engineering;Quantum+Simulation+%26+VQE;Online+Learning+%26+Runtime+Robustness)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&pause=1000&center=true&vCenter=true&width=900&lines=Software+Engineer+%7C+AI+%26+Scientific+Computing;JAX+XLA+Systems+Engineer;Quantum+Simulation+%26+VQE;AI+Runtime+Robustness;Bio-Computational+Pipelines)](https://git.io/typing-svg)
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/salvatore-pennacchio-090924413/)
 [![Email](https://img.shields.io/badge/Email-Reach_Out-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:tatopenn@gmail.com)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/tatopenn-cell)
-[![Dense-Evolution Docs](https://img.shields.io/badge/Docs-Dense--Evolution-00e5ff?style=for-the-badge&logo=materialformkdocs&logoColor=white)](https://tatopenn-cell.github.io/Dense-Evolution/)
-[![PyPI dense-evolution](https://img.shields.io/badge/PyPI-dense--evolution-3775A9?style=for-the-badge&logo=pypi&logoColor=white)](https://pypi.org/project/dense-evolution/)
+[![Docs](https://img.shields.io/badge/Docs-Dense--Evolution-00e5ff?style=for-the-badge&logo=materialformkdocs&logoColor=white)](https://tatopenn-cell.github.io/Dense-Evolution/)
+[![PyPI](https://img.shields.io/badge/PyPI-dense--evolution-3775A9?style=for-the-badge&logo=pypi&logoColor=white)](https://pypi.org/project/dense-evolution/)
 
 </div>
 
 ---
 
-## Purpose
+## 👋 About Me
 
-Four public repositories, all tested in CI, all documented, all with a license. Each one is an engineering artifact, not a demo.
+I am a **Software Engineer and AI-driven scientific researcher** based in Napoli, Italy.
 
-- **[Dense-Evolution](https://github.com/tatopenn-cell/Dense-Evolution)** — NISQ quantum simulation toolkit in JAX/XLA, on PyPI, with a research DOI.
-- **[Dense-Evolution-Discovery](https://github.com/tatopenn-cell/Dense-Evolution-Discovery)** — the research lab where quantum, robot-safety and adversarial experiments are run before they are trusted; results re-measured, negative results kept.
-- **[Dense-Armor](https://github.com/tatopenn-cell/Dense-Armor)** — online-learning library for robots and LLMs, with a runtime protection layer.
-- **[local-quantum-rag](https://github.com/tatopenn-cell/local-quantum-rag)** — local hybrid RAG that grounds the AI's claims in the actual PDFs, so the answers cite what a document says instead of what a model remembers.
+I build software where ideas move through the complete engineering cycle:
 
-| | |
-|---|---|
-| 📍 **Location** | Napoli, Italy |
-| 🧭 **Focus** | JAX/XLA · quantum simulation · online learning · runtime robustness |
-| 📦 **PyPI** | [`dense-evolution` 8.3.2](https://pypi.org/project/dense-evolution/) (Python ≥3.9) · [`dense-armor` 1.1.33](https://pypi.org/project/dense-armor/) (Python ≥3.10) |
-| 🏷️ **Research DOIs** | Dense-Evolution [10.5281/zenodo.21855643](https://doi.org/10.5281/zenodo.21855643) · Discovery [10.5281/zenodo.21855620](https://doi.org/10.5281/zenodo.21855620) · local-quantum-rag [10.5281/zenodo.22914813](https://doi.org/10.5281/zenodo.22914813) |
-| ✅ **CI** | [Dense-Armor](https://github.com/tatopenn-cell/Dense-Armor/actions) · [Dense-Evolution](https://github.com/tatopenn-cell/Dense-Evolution/actions) · [Discovery](https://github.com/tatopenn-cell/Dense-Evolution-Discovery/actions) · [local-quantum-rag](https://github.com/tatopenn-cell/local-quantum-rag/actions) |
+**research → design → prototype → implementation → testing → validation → documentation → release**
 
----
+My work sits at the intersection of:
 
-## Currently
+- 🧑‍💻 **Software Engineering**
+- 🤖 **AI-assisted development**
+- ⚛️ **Quantum simulation**
+- 🧮 **Scientific computing**
+- 🛡️ **AI runtime robustness**
+- 🧬 **Computational biology**
 
-- **Dense-Armor** — the N03 online-learning layers (convolution, recurrent, attention) are merged; one task per week.
-- **Dense-Evolution-Discovery** — re-running quantum experiments after the noise-model update; results re-measured, not copied.
-- **local-quantum-rag** — the four-phase methodology is documented; the constraint layer is being extended.
-- **Reading and re-implementing** — *Attention Is All You Need* (Vaswani et al. 2017) and *LSTM: A Search Space Odyssey* (Greff et al. 2017).
+The goal is not simply to write experimental code, but to turn mathematical and scientific ideas into **tested, reproducible and maintainable software**.
+
+I am the author of [`dense-evolution`](https://pypi.org/project/dense-evolution/), a JAX/XLA statevector simulator for NISQ circuits, VQE and QML, and [`dense-armor`](https://github.com/tatopenn-cell/Dense-Armor), a runtime robustness framework for AI model input/output.
+
+Both projects are developed as real software projects, with automated testing, CI, documentation and public releases.
 
 ---
 
-## Method: how the work is structured
+## 🧑‍💻 How I Work
 
-The work is AI-assisted but human-supervised. AI is a tool inside a documented process, not an autonomous decision maker. The process itself is written down in [local-quantum-rag](https://github.com/tatopenn-cell/local-quantum-rag), in four phases that are not interchangeable:
+My development workflow is **AI-assisted but human-supervised**.
 
-1. **Exploration.** Idea to prototype. Cheap, high-context model, many iterations, code runs outside the model's session.
-2. **Verification.** The question changes from "does it work" to "does it implement what the paper states". A stronger model with retrieval access to the actual PDFs checks the code against the source paper, equation by equation.
-3. **Discovery.** The result moves into a public, reproducible repository, where it may still be rejected. Every script runs end to end; negative results are kept, not deleted.
-4. **Production.** Only what survived Discovery ships to real users. The shipping list is checked against the real directory tree, the platform physically refuses a merge until the named checks are green, and publishing to the index is a separate human-confirmed step.
+AI is used as an engineering tool — not as an autonomous decision maker.
 
-Two principles run through all four phases: **process documents** are for the human, **constraint documents** are for the AI, and they are different documents; and a static instruction only constrains behaviour at the specific trigger points it names — everywhere else, it is invisible.
+### 1. 💡 Start from the problem
 
-> A paper becomes math, math becomes code, and every claim — quantum, statistical or biological — ships next to the script that produced it.
+I begin from a concrete technical or scientific question.
+
+The literature, mathematical model or existing implementation provides the starting point, but the final implementation is designed around the actual problem being solved.
+
+### 2. 🧪 Prototype quickly
+
+Ideas are first implemented as practical prototypes.
+
+The objective is to discover:
+
+- what actually works;
+- where assumptions fail;
+- what needs to be redesigned;
+- which parts deserve production-quality implementation.
+
+### 3. 🔬 Validate aggressively
+
+A prototype is not considered successful simply because it runs.
+
+Validation can include:
+
+- unit tests;
+- integration tests;
+- numerical checks;
+- statistical validation;
+- comparison against references;
+- independent implementations;
+- adversarial testing;
+- regression testing;
+- reproducibility checks.
+
+When AI is involved, its output is also treated as something that must be **verified rather than trusted automatically**.
+
+### 4. 🚀 Turn successful prototypes into software
+
+Once an implementation proves itself, it is promoted into a proper engineering pipeline:
+
+- structured source code;
+- automated tests;
+- CI;
+- documentation;
+- package releases;
+- reproducible experiments;
+- research artifacts when applicable.
+
+The objective is simple:
+
+> **A result should be reproducible by running the software that produced it.**
 
 ---
 
-## About
+## 🧠 Engineering Mindset
 
-Software engineer in Napoli, Italy. The scope is the full engineering cycle — research, design, prototype, implementation, testing, validation, documentation, release — on the four projects above. Every project ships as a Python package (or, for local-quantum-rag, a CLI plus a FastAPI server) with CI, documentation and a license.
+I treat software development as an iterative engineering process.
+
+```text
+Idea
+  ↓
+Prototype
+  ↓
+Test
+  ↓
+Validate
+  ↓
+Find weaknesses
+  ↓
+Redesign
+  ↓
+Automate regression checks
+  ↓
+Document
+  ↓
+Release
+  ↓
+Repeat
+````
+
+AI agents can accelerate individual steps, but the engineering process remains under human control.
+
+Each agent has a specific task, its output is checked, and unexpected behaviour is investigated rather than silently accepted.
 
 ---
 
-# Featured Projects
-
-## [Dense-Evolution](https://github.com/tatopenn-cell/Dense-Evolution)
-
-**NISQ quantum simulation toolkit in JAX/XLA. Statevector and MPS engines, with compilation, noise, VQE, QEC, chemistry and an MCP server for agent-driven control.**
-
-- Up to 28 qubits in about 3 seconds, JIT-compiled through JAX XLA, with automatic chunking and disk spill past the RAM ceiling.
-- A native Hartree-Fock engine with Obara-Saika recursion, real molecular Hamiltonians, Jordan-Wigner mapping.
-- Zero-Noise Extrapolation (Richardson, ZNE-before-PSR), VQE, QEC.
-- Composer web UI and a local Streamlit dashboard.
-- Featured in [Awesome Quantum Software](https://github.com/qosf/awesome-quantum-software).
+## 🔬 Research Interests
 
 <details>
-<summary>Install, license</summary>
+<summary><b>View full research interests</b></summary>
 
-~~~bash
-pip install dense-evolution
-~~~
-
-License: AGPL-3.0. Distributed with documentation, CI and a research DOI.
+Quantum Phase Transitions & Order Parameters • Molecular VQE & Potential Energy Curves • Quantum Defect Mapping • Crystalline Lattice Dispersion & Tight-Binding • Strained-Silicon & GaAs Bandstructure Engineering • Quantum Lattice Thermodynamics (Phonon Scattering & Decoherence) • Zero-Noise Extrapolation (Stochastic Richardson, ZNE-before-PSR, Photonic Predictive) • Loschmidt Echo & Channel Non-Commutativity • Topological Mott Insulators • Quantum Error Correction (Steane [[7,1,3]] on Real Hardware Calibration) • Traversable-Wormhole SYK Teleportation • AI Runtime Robustness • Robust Statistics • Computational Biology • Multi-Agent AI Pipelines
 
 </details>
 
-[PyPI](https://pypi.org/project/dense-evolution/) · [CI](https://github.com/tatopenn-cell/Dense-Evolution/actions/workflows/ci.yml) · [DOI](https://doi.org/10.5281/zenodo.21855643) · [Docs](https://tatopenn-cell.github.io/Dense-Evolution/)
+---
+
+# ⭐ Featured Projects
+
+## ⚛️ Quantum Simulation & Chemistry
+
+### 🧮 [dense-evolution](https://github.com/tatopenn-cell/Dense-Evolution)
+
+A **JAX/XLA statevector simulator** for NISQ circuits, VQE and QML.
+
+The project combines high-performance numerical computing with quantum chemistry functionality, including:
+
+* stride-sliced kernel fusion;
+* JAX/XLA execution;
+* a native Hartree-Fock engine;
+* **Obara-Saika recursion**;
+* real molecular Hamiltonians;
+* Jordan-Wigner mapping;
+* Zero-Noise Extrapolation;
+* Richardson extrapolation;
+* Composer web UI;
+* MCP server for agent-driven control.
+
+The project is distributed as a real Python package and includes public documentation, CI and research artifacts.
+
+**Concepts:**
+`Obara-Saika Recursion` • `Jordan-Wigner Mapping` • `Richardson Extrapolation` • `Kernel Fusion` • `JAX/XLA`
+
+[![PyPI](https://img.shields.io/pypi/v/dense-evolution?style=flat-square\&color=00e5ff)](https://pypi.org/project/dense-evolution/)
+[![CI](https://github.com/tatopenn-cell/Dense-Evolution/actions/workflows/ci.yml/badge.svg)](https://github.com/tatopenn-cell/Dense-Evolution/actions/workflows/ci.yml)
+[![DOI](https://zenodo.org/badge/1247011090.svg)](https://doi.org/10.5281/zenodo.21855643)
 
 ---
 
-## [Dense-Evolution-Discovery](https://github.com/tatopenn-cell/Dense-Evolution-Discovery)
+### 🌀 [Dense-Evolution-Discovery](https://github.com/tatopenn-cell/Dense-Evolution-Discovery)
 
-**The research lab for Dense-Evolution and Dense-Armor. Every claim is a script, run and checked before it was written up, with the negative results kept alongside the positive ones.**
+The research and experimental layer built on top of Dense-Evolution.
 
-<details>
-<summary>What is inside, license</summary>
+It contains **documented computational experiments**, with results re-measured when changes to the underlying simulator or noise model could affect previous conclusions.
 
-- **MPS GPU optimization** — the matrix-product-state backend on GPU (2.16× measured), with the three real bugs found along the way.
-- **Dense-Armor: robot safety** — drift, fault detection and safety filtering on real IMU, Lidar and LeRobot arm data.
-- **Dense-Armor: security telemetry** — MITRE ATT&CK APT29 attack detection on real Sysmon telemetry, plus Orca protecting a real scikit-learn model from adversarial input corruption.
-- **Quantum simulation and physics** — TFIM phase transitions, VQE, ZNE, tight-binding materials, and a critical replication of the traversable-wormhole teleportation protocol.
-- **Diagnostics and healing** — density-matrix noise diagnostics (Rényi divergence, magic entropy) and vector-healing fixes that were shipped back into Dense-Evolution.
-- **Dynamic Vacuum Pressure Theory** — a cosh-shaped vacuum regularization derived from three independent directions, checked against real EHT/LIGO/NICER data, with a dense_evolution-verified Z₂ symmetry linking cosh, the Bell state and Taoist duality.
+The goal is to keep the experimental process reproducible rather than treating research results as static numbers.
 
-License: see the LICENSE.md file in the repository.
-
-</details>
-
-[CI](https://github.com/tatopenn-cell/Dense-Evolution-Discovery/actions/workflows/ci.yml) · [DOI](https://doi.org/10.5281/zenodo.21855620) · [Docs](https://tatopenn-cell.github.io/Dense-Evolution-Discovery/)
+**Concepts:**
+`Parameter-Shift Rule` • `Born-Rule Kraus Sampling` • `Statistical Re-Verification`
 
 ---
+### 🐙 [Dense-Armor](https://github.com/tatopenn-cell/Dense-Armor)
 
-## [Dense-Armor](https://github.com/tatopenn-cell/Dense-Armor)
-
-**Online-learning library for robots and LLMs. One sample at a time, inside a control-loop budget, with a runtime protection layer.**
+**An online-learning library for robots and LLMs. One sample at a time, inside a control-loop budget, with a runtime protection layer.**
 
 - **Learns one sample at a time.** Every estimator has `learn_one`, `predict_one`, `score_one`. No retraining, no batch.
 - **Fits a control loop.** `budget_s` and `RealtimePipeline` refuse an estimator that does not fit the period.
 - **Protects itself while it learns.** `Protected` and `SafeEstimator` wrap any model; a drift detector, an anomaly detector or the `Orca` runtime shield can flag and fall back.
-- **One base for everything.** Classifiers, regressors, transformers, anomaly and drift detectors inherit from `dense_armor.roles`. An estimator for a robot is also an estimator an LLM can call as a tool.
+- **One base for everything.** Classifiers, regressors, transformers, anomaly and drift detectors all inherit from `dense_armor.roles`. An estimator for a robot is also an estimator an LLM can call as a tool.
 
 <details>
-<summary>Install, what is inside, license</summary>
+<summary>What is inside</summary>
 
-~~~bash
-pip install dense-armor
-~~~
+**Thirty families** under `dense_armor/utility/`: linear models, naive Bayes, k-NN, incremental trees and forests, ensembles, factorization machines, recommenders, bandits, multiclass and multi-output; the full neural stack (dense, convolution, RNN/GRU/LSTM, multi-head attention, transformer blocks, plus `mlp`, `resnet_mlp`, `cnn`, `recurrent_net`, `transformer_encoder`); streaming statistics and sketches; CUSUM, Page-Hinkley, ADWIN, KSWIN, BOCPD; fourteen anomaly detectors; twenty online metrics; online vision; kinematic control and CBF filters.
 
-**32 families** under `dense_armor/utility/`: linear models, naive Bayes, k-NN, incremental trees and forests, ensembles, factorization machines, recommenders, bandits, multiclass and multi-output; the neural stack (dense, convolution, RNN/GRU/LSTM, multi-head attention, transformer blocks, plus `mlp`, `resnet_mlp`, `cnn`, `recurrent_net`, `transformer_encoder`); streaming statistics and sketches; CUSUM, Page-Hinkley, ADWIN, KSWIN, BOCPD; fourteen anomaly detectors; twenty online metrics; online vision; kinematic control and CBF filters.
+**The protection layer** (`protect/`): `Armatura` (a Phi_AB coherence trigger on 1D signal streams) and `Orca` (an adaptive stabilizer with a Collatz-based damping gate). Thresholds adapt with Jensen-Shannon divergence on the local window. Adversarial robustness is measured against the same engine the system uses, not a separate benchmark; weak cases are reported, not hidden.
 
-**The protection layer** (`protect/`): `Armatura` (a Phi_AB coherence trigger on 1D signal streams) and `Orca` (an adaptive stabilizer with a Collatz-based damping gate). Thresholds adapt with Jensen-Shannon divergence on the local window. Adversarial robustness is measured against the same engine the system uses; weak cases are reported, not hidden.
+**Optional bridges**, installed as extras: `[river]`, `[llm]`, `[quantum]`, `[vision]`, `[drone]`, `[ros]`, `[finance-stream]`, `[data]`, `[audio]`, `[mcp]`.
 
-**Optional bridges**, installed as extras: `river`, `llm`, `quantum`, `vision`, `drone`, `ros`, `finance-stream`, `data`, `audio`, `mcp`.
-
-**Documentation:** 39 sections on the site, including `docs/drones/` (13 pages), `docs/finance/` (17 pages), `docs/shields/` (5 pages) and `docs/compare/`, where each batch class of the machine-learning task is compared, on the same data and metric, with its online counterpart.
-
-License: the repository carries `LICENSE` and `LICENSE-BUSL-1.1-until-1.1.32.md` (the historical license for versions up to 1.1.32).
+**Documentation:** 35 sections on the site, including `docs/drones/` (13 pages), `docs/finance/` (17 pages), `docs/shields/` (5 pages) and `docs/compare/` where each batch class of the machine-learning task is compared, on the same data and metric, with its online counterpart.
 
 </details>
 
-[PyPI](https://pypi.org/project/dense-armor/) · [CI](https://github.com/tatopenn-cell/Dense-Armor/actions/workflows/tests.yml) · [codecov](https://codecov.io/gh/tatopenn-cell/Dense-Armor) · [Docs](https://tatopenn-cell.github.io/Dense-Armor/)
+**Concepts:** `online learning` · `one sample at a time` · `control-loop budget` · `JAX/XLA` · `finite-difference gradient checks` · `CUSUM` · `ADWIN` · `BOCPD` · `prequential evaluation` · `Jensen-Shannon adaptive threshold`
+
+[![PyPI](https://img.shields.io/badge/pypi-dense--armor-3775A9?style=flat-square&logo=pypi&logoColor=white)](https://pypi.org/project/dense-armor/)
+[![tests](https://github.com/tatopenn-cell/Dense-Armor/actions/workflows/tests.yml/badge.svg)](https://github.com/tatopenn-cell/Dense-Armor/actions/workflows/tests.yml)
+[![codecov](https://codecov.io/gh/tatopenn-cell/Dense-Armor/branch/master/graph/badge.svg)](https://codecov.io/gh/tatopenn-cell/Dense-Armor)
+[![Docs](https://img.shields.io/badge/docs-tatopenn--cell.github.io-00e5ff?style=flat-square)](https://tatopenn-cell.github.io/Dense-Armor/)
+---
+
+# 🧬 Computational Biology
+
+### 🧫 Dense-Evolution-Molecular-Pipeline
+
+🚧 **Work in progress — repository currently private.**
+
+A hybrid bio-quantum computational pipeline for **Chronic Myeloid Leukemia treatment optimization**.
+
+The current architecture combines:
+
+* JAX-accelerated genetic algorithms;
+* BCR-ABL1 kinase-domain sequence exploration;
+* Meta ESMFold API;
+* protein structure generation;
+* JAX-native molecular docking;
+* computational optimization.
+
+The project will be featured publicly once the implementation is ready to share.
 
 ---
 
-## [local-quantum-rag](https://github.com/tatopenn-cell/local-quantum-rag)
+# 📊 Engineering Signals
 
-**Local hybrid RAG that grounds technical conversations in your own PDFs and notes, so an AI assistant cites what a document actually says instead of what it remembers.**
+The projects are intended to demonstrate not only research ideas, but the ability to turn those ideas into software artifacts.
 
-- CLI (`query.py`) for everyday use; optional local FastAPI server (`server.py`) that keeps the embedding and reranker models warm across repeated queries.
-- Endpoints `/search`, `/search_exact`, `/collections`, with an in-process mtime-invalidated cache and token auth.
-- The methodology described above lives here: four phases, process documents vs constraint documents, verification against the source paper.
+| Project                       | Package          | CI | Tests | Documentation | Research Artifact |
+| ----------------------------- | ---------------- | -- | ----- | ------------- | ----------------- |
+| **Dense-Evolution**           | ✅ PyPI           | ✅  | ✅     | ✅             | ✅ DOI             |
+| **Dense-Armor**               | ✅ PyPI           | ✅  | ✅     | ✅             | —                 |
+| **Dense-Evolution-Discovery** | 🔬 Research repo | —  | 🔬    | 🔬            | 🔬                |
 
-<details>
-<summary>Install, license</summary>
-
-~~~bash
-pip install -e .
-~~~
-
-Optional server:
-
-~~~bash
-pip install -e .[server]
-python server.py --port 8000
-~~~
-
-License: MIT.
-
-</details>
-
-[CI](https://github.com/tatopenn-cell/local-quantum-rag/actions/workflows/ci.yml) · [DOI](https://doi.org/10.5281/zenodo.22914813) · [Docs](https://tatopenn-cell.github.io/local-quantum-rag/)
+The important distinction is between **an experiment that runs once** and **software that can be tested, reproduced, documented and released**.
 
 ---
 
-# Engineering Signals
+# 🛠️ Technical Stack
 
-| Project | Package | CI | Tests | Documentation | DOI |
-|---|---|---|---|---|---|
-| Dense-Evolution | PyPI 8.3.2 | ✅ | ✅ | ✅ | ✅ |
-| Dense-Evolution-Discovery | research repo | ✅ | ✅ | ✅ | ✅ |
-| Dense-Armor | PyPI 1.1.33 | ✅ | ✅ | ✅ | — |
-| local-quantum-rag | CLI + FastAPI server | ✅ | ✅ | ✅ | ✅ |
+## ⚛️ Quantum & Scientific Computing
 
-The distinction that matters: **an experiment that runs once** vs **software that can be tested, reproduced, documented and released**.
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge\&logo=python\&logoColor=white)
+![JAX](https://img.shields.io/badge/JAX_XLA-f9ab00?style=for-the-badge\&logo=google\&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge\&logo=numpy\&logoColor=white)
+![SciPy](https://img.shields.io/badge/SciPy-8CAAE6?style=for-the-badge\&logo=scipy\&logoColor=white)
+![Qiskit](https://img.shields.io/badge/Qiskit-6929C4?style=for-the-badge\&logo=qiskit\&logoColor=white)
+![PennyLane](https://img.shields.io/badge/PennyLane-1a1a2e?style=for-the-badge)
+
+## 🧬 Bio-Computational
+
+![RDKit](https://img.shields.io/badge/RDKit-1a1a2e?style=for-the-badge)
+![Py3Dmol](https://img.shields.io/badge/Py3Dmol-2e7d32?style=for-the-badge)
+
+## 📦 Release & Publishing
+
+![PyPI](https://img.shields.io/badge/PyPI-3775A9?style=for-the-badge\&logo=pypi\&logoColor=white)
+![Zenodo](https://img.shields.io/badge/Zenodo-1682D4?style=for-the-badge\&logo=zenodo\&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge\&logo=githubactions\&logoColor=white)
+![MkDocs Material](https://img.shields.io/badge/MkDocs_Material-526CFE?style=for-the-badge\&logo=materialformkdocs\&logoColor=white)
+
+## 🤖 Multi-Agent & Knowledge Tooling
+
+![Model Context Protocol](https://img.shields.io/badge/MCP-000000?style=for-the-badge)
+![RAG](https://img.shields.io/badge/RAG_Knowledge_Base-6a0dad?style=for-the-badge)
+![Multi--Agent Pipelines](https://img.shields.io/badge/Multi--Agent_Pipelines-00897b?style=for-the-badge)
+
+## ⚙️ Tools & Workflow
+
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge\&logo=git\&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge\&logo=github\&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge\&logo=linux\&logoColor=black)
 
 ---
 
-# Technical Stack
+# 🔄 From Research to Software
 
-**Scientific computing** — Python · JAX/XLA · NumPy · SciPy · Qiskit · PennyLane
+```text
+Scientific / Technical Idea
+            │
+            ▼
+       Literature
+            │
+            ▼
+        Prototype
+            │
+            ▼
+     Practical Testing
+            │
+            ▼
+   AI-Assisted Validation
+            │
+            ▼
+   Independent Verification
+            │
+            ▼
+    Automated Regression
+            │
+            ▼
+      Documentation
+            │
+            ▼
+       Package / Release
+            │
+            ▼
+    Reproducible Artifact
+```
 
-**Engineering** — pytest · coverage · Ruff · Mypy · GitHub Actions · MkDocs Material · PyPI · Zenodo
+The objective is to make the entire chain traceable.
 
-**RAG and AI tooling** — FastAPI · sentence-transformers · cross-encoder rerankers · MCP
-
-**Environment** — Jupyter · Colab · Kaggle · Git · Linux
+**Idea → implementation → test → result.**
 
 ---
 
-# Get in Touch
+# 💡 Philosophy
+
+> **A paper becomes math, math becomes code, and every claim — quantum, statistical, or biological — ships next to the script that produced it.**
+
+Good research should be reproducible.
+
+Good software should be testable.
+
+And when the two meet, the implementation should make the reasoning easier to inspect rather than harder.
+
+---
+
+# 📬 Get in Touch
+
+Questions, ideas, or a paper worth implementing?
 
 [**tatopenn@gmail.com**](mailto:tatopenn@gmail.com) ·
 [**LinkedIn**](https://www.linkedin.com/in/salvatore-pennacchio-090924413/) ·
-[**Dense-Evolution issues →**](https://github.com/tatopenn-cell/Dense-Evolution/issues) ·
-[**Dense-Armor issues →**](https://github.com/tatopenn-cell/Dense-Armor/issues)
+[**Dense-Evolution issues →**](https://github.com/tatopenn-cell/Dense-Evolution/issues)
 
 <div align="center">
 
@@ -216,3 +356,5 @@ The distinction that matters: **an experiment that runs once** vs **software tha
 <img src="https://user-images.githubusercontent.com/74038190/216655855-e00c1861-e964-4b4f-90ae-2592cad7b272.gif" width="160"/>
 
 </div>
+```
+
