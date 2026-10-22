@@ -31,13 +31,14 @@ My work sits at the intersection of:
 - ⚛️ **Quantum simulation**
 - 🧮 **Scientific computing**
 - 🛡️ **AI runtime robustness**
+- 📈 **Online machine learning**
 - 🧬 **Computational biology**
 
 The goal is not simply to write experimental code, but to turn mathematical and scientific ideas into **tested, reproducible and maintainable software**.
 
-I am the author of [`dense-evolution`](https://pypi.org/project/dense-evolution/), a JAX/XLA statevector simulator for NISQ circuits, VQE and QML, and [`dense-armor`](https://github.com/tatopenn-cell/Dense-Armor), a runtime robustness framework for AI model input/output.
+I am the author of [`dense-evolution`](https://pypi.org/project/dense-evolution/), a JAX/XLA statevector simulator for NISQ circuits, VQE and QML, and [`dense-armor`](https://github.com/tatopenn-cell/Dense-Armor), an online-learning library for robots and LLMs with a runtime protection layer. Two further repositories support the work: [`Dense-Evolution-Discovery`](https://github.com/tatopenn-cell/Dense-Evolution-Discovery), the research lab where every claim is a script run and checked before it is written up, and [`local-quantum-rag`](https://github.com/tatopenn-cell/local-quantum-rag), the local hybrid RAG that grounds the research in the actual PDFs.
 
-Both projects are developed as real software projects, with automated testing, CI, documentation and public releases.
+All four projects are developed as real software projects, with automated testing, CI, documentation and public releases.
 
 ---
 
@@ -100,11 +101,30 @@ The objective is simple:
 
 ---
 
+## 🔄 The Method: Four Phases
+
+The engineering process above is written down in [`local-quantum-rag/docs`](https://github.com/tatopenn-cell/local-quantum-rag/tree/main/docs) as an explicit four-phase architecture. The four phases are not interchangeable: each has its own environment, its own success criterion, and its own model requirements.
+
+**1. Exploration.** Idea to prototype. Cheap, high-context model, many iterations, execution happening outside the model's session. Divergent, conversational, no dedicated process document.
+
+**2. Verification.** The question changes from *does it work?* to *does it implement what the literature states?*. A stronger model with retrieval access to the actual PDFs checks the code against the source paper, equation by equation, under a set of standing constraints on the agent's behaviour. Divergent → convergent.
+
+**3. Discovery.** The result moves into a public, reproducible environment where it may still be rejected. Every entry is a standalone script that produces its own result end to end; a negative result is written up with the same care as a positive one and left in place, so the next attempt does not repeat it. The single most common failure mode: a promising result that disappears under a negative control (shuffled labels, randomised baseline) was never a real effect.
+
+**4. Production.** Only what survived Discovery ships to real users. The shipping list is checked against the real directory tree, the platform physically refuses a merge until the named checks are green, and publishing to the index is a separate human-confirmed step. A green checkmark is evidence toward safety, not proof of it.
+
+Two principles run through all four phases:
+
+- **Process documents are for the human, constraint documents are for the AI**, and they are different documents.
+- **A static instruction only constrains behaviour at the specific trigger points it names** — everywhere else, it is invisible.
+
+---
+
 ## 🧠 Engineering Mindset
 
 I treat software development as an iterative engineering process.
 
-```text
+~~~text
 Idea
   ↓
 Prototype
@@ -124,7 +144,7 @@ Document
 Release
   ↓
 Repeat
-````
+~~~
 
 AI agents can accelerate individual steps, but the engineering process remains under human control.
 
@@ -137,7 +157,7 @@ Each agent has a specific task, its output is checked, and unexpected behaviour 
 <details>
 <summary><b>View full research interests</b></summary>
 
-Quantum Phase Transitions & Order Parameters • Molecular VQE & Potential Energy Curves • Quantum Defect Mapping • Crystalline Lattice Dispersion & Tight-Binding • Strained-Silicon & GaAs Bandstructure Engineering • Quantum Lattice Thermodynamics (Phonon Scattering & Decoherence) • Zero-Noise Extrapolation (Stochastic Richardson, ZNE-before-PSR, Photonic Predictive) • Loschmidt Echo & Channel Non-Commutativity • Topological Mott Insulators • Quantum Error Correction (Steane [[7,1,3]] on Real Hardware Calibration) • Traversable-Wormhole SYK Teleportation • AI Runtime Robustness • Robust Statistics • Computational Biology • Multi-Agent AI Pipelines
+Quantum Phase Transitions & Order Parameters • Molecular VQE & Potential Energy Curves • Quantum Defect Mapping • Crystalline Lattice Dispersion & Tight-Binding • Strained-Silicon & GaAs Bandstructure Engineering • Quantum Lattice Thermodynamics (Phonon Scattering & Decoherence) • Zero-Noise Extrapolation (Stochastic Richardson, ZNE-before-PSR, Photonic Predictive) • Loschmidt Echo & Channel Non-Commutativity • Topological Mott Insulators • Quantum Error Correction (Steane [[7,1,3]] on Real Hardware Calibration) • Traversable-Wormhole SYK Teleportation • Online Machine Learning • AI Runtime Robustness • Robust Statistics • Computational Biology • Multi-Agent AI Pipelines
 
 </details>
 
@@ -169,7 +189,7 @@ The project is distributed as a real Python package and includes public document
 **Concepts:**
 `Obara-Saika Recursion` • `Jordan-Wigner Mapping` • `Richardson Extrapolation` • `Kernel Fusion` • `JAX/XLA`
 
-[![PyPI](https://img.shields.io/pypi/v/dense-evolution?style=flat-square\&color=00e5ff)](https://pypi.org/project/dense-evolution/)
+[![PyPI](https://img.shields.io/pypi/v/dense-evolution?style=flat-square&color=00e5ff)](https://pypi.org/project/dense-evolution/)
 [![CI](https://github.com/tatopenn-cell/Dense-Evolution/actions/workflows/ci.yml/badge.svg)](https://github.com/tatopenn-cell/Dense-Evolution/actions/workflows/ci.yml)
 [![DOI](https://zenodo.org/badge/1247011090.svg)](https://doi.org/10.5281/zenodo.21855643)
 
@@ -181,12 +201,27 @@ The research and experimental layer built on top of Dense-Evolution.
 
 It contains **documented computational experiments**, with results re-measured when changes to the underlying simulator or noise model could affect previous conclusions.
 
-The goal is to keep the experimental process reproducible rather than treating research results as static numbers.
+The goal is to keep the experimental process reproducible rather than treating research results as static numbers. Every claim is a script, run and checked before it is written up, with the negative results kept alongside the positive ones.
+
+Current experiments include:
+
+* MPS GPU optimization of the matrix-product-state backend (2.16× measured, with the three real bugs found along the way);
+* Dense-Armor robot safety on real IMU, Lidar and LeRobot arm data;
+* MITRE ATT&CK APT29 attack detection on real Sysmon telemetry, plus Orca protecting a real scikit-learn model from adversarial input corruption;
+* TFIM phase transitions, VQE, ZNE, tight-binding materials, and a critical replication of the traversable-wormhole teleportation protocol;
+* density-matrix noise diagnostics (Rényi divergence, magic entropy) and vector-healing fixes shipped back into Dense-Evolution;
+* the *Dynamic Vacuum Pressure Theory* paper, a `cosh`-shaped vacuum regularization checked against real EHT/LIGO/NICER data, with a `dense_evolution`-verified Z₂ symmetry linking `cosh`, the Bell state and Taoist duality.
 
 **Concepts:**
-`Parameter-Shift Rule` • `Born-Rule Kraus Sampling` • `Statistical Re-Verification`
+`Parameter-Shift Rule` • `Born-Rule Kraus Sampling` • `Statistical Re-Verification` • `Negative Controls`
+
+[![CI](https://github.com/tatopenn-cell/Dense-Evolution-Discovery/actions/workflows/ci.yml/badge.svg)](https://github.com/tatopenn-cell/Dense-Evolution-Discovery/actions/workflows/ci.yml)
+[![DOI](https://zenodo.org/badge/1258407155.svg)](https://doi.org/10.5281/zenodo.21855620)
 
 ---
+
+## 🛡️ AI Runtime Robustness & Online Learning
+
 ### 🐙 [Dense-Armor](https://github.com/tatopenn-cell/Dense-Armor)
 
 **An online-learning library for robots and LLMs. One sample at a time, inside a control-loop budget, with a runtime protection layer.**
@@ -199,13 +234,13 @@ The goal is to keep the experimental process reproducible rather than treating r
 <details>
 <summary>What is inside</summary>
 
-**Thirty families** under `dense_armor/utility/`: linear models, naive Bayes, k-NN, incremental trees and forests, ensembles, factorization machines, recommenders, bandits, multiclass and multi-output; the full neural stack (dense, convolution, RNN/GRU/LSTM, multi-head attention, transformer blocks, plus `mlp`, `resnet_mlp`, `cnn`, `recurrent_net`, `transformer_encoder`); streaming statistics and sketches; CUSUM, Page-Hinkley, ADWIN, KSWIN, BOCPD; fourteen anomaly detectors; twenty online metrics; online vision; kinematic control and CBF filters.
+**32 families** under `dense_armor/utility/`: linear models, naive Bayes, k-NN, incremental trees and forests, ensembles, factorization machines, recommenders, bandits, multiclass and multi-output; the full neural stack (dense, convolution, RNN/GRU/LSTM, multi-head attention, transformer blocks, plus `mlp`, `resnet_mlp`, `cnn`, `recurrent_net`, `transformer_encoder`); streaming statistics and sketches; CUSUM, Page-Hinkley, ADWIN, KSWIN, BOCPD; fourteen anomaly detectors; twenty online metrics; online vision; kinematic control and CBF filters.
 
 **The protection layer** (`protect/`): `Armatura` (a Phi_AB coherence trigger on 1D signal streams) and `Orca` (an adaptive stabilizer with a Collatz-based damping gate). Thresholds adapt with Jensen-Shannon divergence on the local window. Adversarial robustness is measured against the same engine the system uses, not a separate benchmark; weak cases are reported, not hidden.
 
 **Optional bridges**, installed as extras: `[river]`, `[llm]`, `[quantum]`, `[vision]`, `[drone]`, `[ros]`, `[finance-stream]`, `[data]`, `[audio]`, `[mcp]`.
 
-**Documentation:** 35 sections on the site, including `docs/drones/` (13 pages), `docs/finance/` (17 pages), `docs/shields/` (5 pages) and `docs/compare/` where each batch class of the machine-learning task is compared, on the same data and metric, with its online counterpart.
+**Documentation:** 39 sections on the site, including `docs/drones/` (13 pages), `docs/finance/` (17 pages), `docs/shields/` (5 pages) and `docs/compare/` where each batch class of the machine-learning task is compared, on the same data and metric, with its online counterpart.
 
 </details>
 
@@ -215,6 +250,25 @@ The goal is to keep the experimental process reproducible rather than treating r
 [![tests](https://github.com/tatopenn-cell/Dense-Armor/actions/workflows/tests.yml/badge.svg)](https://github.com/tatopenn-cell/Dense-Armor/actions/workflows/tests.yml)
 [![codecov](https://codecov.io/gh/tatopenn-cell/Dense-Armor/branch/master/graph/badge.svg)](https://codecov.io/gh/tatopenn-cell/Dense-Armor)
 [![Docs](https://img.shields.io/badge/docs-tatopenn--cell.github.io-00e5ff?style=flat-square)](https://tatopenn-cell.github.io/Dense-Armor/)
+
+---
+
+## 🤖 Retrieval-Augmented Research
+
+### 🔍 [local-quantum-rag](https://github.com/tatopenn-cell/local-quantum-rag)
+
+A small, **local, hybrid RAG tool** for grounding technical conversations in your own PDFs and notes, so an AI assistant cites what a document actually says instead of what it remembers.
+
+A CLI (`query.py`) covers everyday use; an optional local FastAPI server (`server.py`) keeps the embedding and reranker models warm across repeated queries, with endpoints `/search`, `/search_exact` and `/collections`, an in-process mtime-invalidated cache and token auth.
+
+The four-phase methodology described above lives here, together with a case study of a context-reload trigger gap found and fixed.
+
+**Concepts:**
+`hybrid retrieval` · `cross-encoder reranking` · `PDF grounding` · `FastAPI` · `token auth` · `mtime cache`
+
+[![CI](https://github.com/tatopenn-cell/local-quantum-rag/actions/workflows/ci.yml/badge.svg)](https://github.com/tatopenn-cell/local-quantum-rag/actions/workflows/ci.yml)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22914813.svg)](https://doi.org/10.5281/zenodo.22914813)
+
 ---
 
 # 🧬 Computational Biology
@@ -242,11 +296,12 @@ The project will be featured publicly once the implementation is ready to share.
 
 The projects are intended to demonstrate not only research ideas, but the ability to turn those ideas into software artifacts.
 
-| Project                       | Package          | CI | Tests | Documentation | Research Artifact |
-| ----------------------------- | ---------------- | -- | ----- | ------------- | ----------------- |
-| **Dense-Evolution**           | ✅ PyPI           | ✅  | ✅     | ✅             | ✅ DOI             |
-| **Dense-Armor**               | ✅ PyPI           | ✅  | ✅     | ✅             | —                 |
-| **Dense-Evolution-Discovery** | 🔬 Research repo | —  | 🔬    | 🔬            | 🔬                |
+| Project | Package | CI | Tests | Documentation | Research Artifact |
+| --- | --- | --- | --- | --- | --- |
+| **Dense-Evolution** | ✅ PyPI 8.3.2 | ✅ | ✅ | ✅ | ✅ DOI |
+| **Dense-Armor** | ✅ PyPI 1.1.33 | ✅ | ✅ | ✅ | — |
+| **Dense-Evolution-Discovery** | Research repo | ✅ | ✅ | ✅ | ✅ DOI |
+| **local-quantum-rag** | CLI + FastAPI server | ✅ | ✅ | ✅ | ✅ DOI |
 
 The important distinction is between **an experiment that runs once** and **software that can be tested, reproduced, documented and released**.
 
@@ -256,42 +311,84 @@ The important distinction is between **an experiment that runs once** and **soft
 
 ## ⚛️ Quantum & Scientific Computing
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge\&logo=python\&logoColor=white)
-![JAX](https://img.shields.io/badge/JAX_XLA-f9ab00?style=for-the-badge\&logo=google\&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge\&logo=numpy\&logoColor=white)
-![SciPy](https://img.shields.io/badge/SciPy-8CAAE6?style=for-the-badge\&logo=scipy\&logoColor=white)
-![Qiskit](https://img.shields.io/badge/Qiskit-6929C4?style=for-the-badge\&logo=qiskit\&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![JAX](https://img.shields.io/badge/JAX_XLA-f9ab00?style=for-the-badge&logo=google&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![SciPy](https://img.shields.io/badge/SciPy-8CAAE6?style=for-the-badge&logo=scipy&logoColor=white)
+![Qiskit](https://img.shields.io/badge/Qiskit-6929C4?style=for-the-badge&logo=qiskit&logoColor=white)
 ![PennyLane](https://img.shields.io/badge/PennyLane-1a1a2e?style=for-the-badge)
+![Numba](https://img.shields.io/badge/Numba-00A3E0?style=for-the-badge&logo=numba&logoColor=white)
+
+## 🧪 Testing & Code Quality
+
+![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white)
+![coverage](https://img.shields.io/badge/coverage-CC0000?style=for-the-badge&logo=codecov&logoColor=white)
+![Ruff](https://img.shields.io/badge/Ruff-D7FF64?style=for-the-badge&logo=ruff&logoColor=black)
+![Mypy](https://img.shields.io/badge/Mypy-2A6DB2?style=for-the-badge&logo=python&logoColor=white)
+![pre-commit](https://img.shields.io/badge/pre--commit-FAB040?style=for-the-badge&logo=precommit&logoColor=white)
+
+## 📊 Data & Figures
+
+![pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=python&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
+![Pillow](https://img.shields.io/badge/Pillow-3776AB?style=for-the-badge&logo=python&logoColor=white)
+
+## 🧠 Deep Learning & Adversarial
+
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![Optax](https://img.shields.io/badge/Optax-1a1a2e?style=for-the-badge)
+![Flax](https://img.shields.io/badge/Flax-1a1a2e?style=for-the-badge)
 
 ## 🧬 Bio-Computational
 
 ![RDKit](https://img.shields.io/badge/RDKit-1a1a2e?style=for-the-badge)
 ![Py3Dmol](https://img.shields.io/badge/Py3Dmol-2e7d32?style=for-the-badge)
 
-## 📦 Release & Publishing
+## 🔍 RAG & AI Tooling
 
-![PyPI](https://img.shields.io/badge/PyPI-3775A9?style=for-the-badge\&logo=pypi\&logoColor=white)
-![Zenodo](https://img.shields.io/badge/Zenodo-1682D4?style=for-the-badge\&logo=zenodo\&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge\&logo=githubactions\&logoColor=white)
-![MkDocs Material](https://img.shields.io/badge/MkDocs_Material-526CFE?style=for-the-badge\&logo=materialformkdocs\&logoColor=white)
-
-## 🤖 Multi-Agent & Knowledge Tooling
-
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Pydantic](https://img.shields.io/badge/Pydantic-E92063?style=for-the-badge&logo=pydantic&logoColor=white)
+![sentence-transformers](https://img.shields.io/badge/sentence--transformers-1a1a2e?style=for-the-badge)
 ![Model Context Protocol](https://img.shields.io/badge/MCP-000000?style=for-the-badge)
 ![RAG](https://img.shields.io/badge/RAG_Knowledge_Base-6a0dad?style=for-the-badge)
+
+## 📄 Research Tooling
+
+![pypdf](https://img.shields.io/badge/pypdf-1a1a2e?style=for-the-badge)
+![PyMuPDF](https://img.shields.io/badge/PyMuPDF-1a1a2e?style=for-the-badge)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+
+## 📦 Release & Publishing
+
+![PyPI](https://img.shields.io/badge/PyPI-3775A9?style=for-the-badge&logo=pypi&logoColor=white)
+![Zenodo](https://img.shields.io/badge/Zenodo-1682D4?style=for-the-badge&logo=zenodo&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
+![MkDocs Material](https://img.shields.io/badge/MkDocs_Material-526CFE?style=for-the-badge&logo=materialformkdocs&logoColor=white)
+
+## 🤖 Multi-Agent Pipelines
+
 ![Multi--Agent Pipelines](https://img.shields.io/badge/Multi--Agent_Pipelines-00897b?style=for-the-badge)
+
+## 🧑‍💻 Development Environment
+
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
+![Google Colab](https://img.shields.io/badge/Google_Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white)
+![Kaggle](https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)
+![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)
 
 ## ⚙️ Tools & Workflow
 
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge\&logo=git\&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge\&logo=github\&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge\&logo=linux\&logoColor=black)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 
 ---
 
 # 🔄 From Research to Software
 
-```text
+~~~text
 Scientific / Technical Idea
             │
             ▼
@@ -320,7 +417,7 @@ Scientific / Technical Idea
             │
             ▼
     Reproducible Artifact
-```
+~~~
 
 The objective is to make the entire chain traceable.
 
@@ -346,7 +443,8 @@ Questions, ideas, or a paper worth implementing?
 
 [**tatopenn@gmail.com**](mailto:tatopenn@gmail.com) ·
 [**LinkedIn**](https://www.linkedin.com/in/salvatore-pennacchio-090924413/) ·
-[**Dense-Evolution issues →**](https://github.com/tatopenn-cell/Dense-Evolution/issues)
+[**Dense-Evolution issues →**](https://github.com/tatopenn-cell/Dense-Evolution/issues) ·
+[**Dense-Armor issues →**](https://github.com/tatopenn-cell/Dense-Armor/issues)
 
 <div align="center">
 
@@ -356,5 +454,3 @@ Questions, ideas, or a paper worth implementing?
 <img src="https://user-images.githubusercontent.com/74038190/216655855-e00c1861-e964-4b4f-90ae-2592cad7b272.gif" width="160"/>
 
 </div>
-```
-
