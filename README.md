@@ -187,71 +187,34 @@ The goal is to keep the experimental process reproducible rather than treating r
 `Parameter-Shift Rule` • `Born-Rule Kraus Sampling` • `Statistical Re-Verification`
 
 ---
-
-# 🛡️ AI Runtime Robustness
-
 ### 🐙 [Dense-Armor](https://github.com/tatopenn-cell/Dense-Armor)
 
-A runtime shield for **AI model input/output**, designed to work without retraining the underlying model.
+**An online-learning library for robots and LLMs. One sample at a time, inside a control-loop budget, with a runtime protection layer.**
 
-Dense-Armor contains two main components:
+- **Learns one sample at a time.** Every estimator has `learn_one`, `predict_one`, `score_one`. No retraining, no batch.
+- **Fits a control loop.** `budget_s` and `RealtimePipeline` refuse an estimator that does not fit the period.
+- **Protects itself while it learns.** `Protected` and `SafeEstimator` wrap any model; a drift detector, an anomaly detector or the `Orca` runtime shield can flag and fall back.
+- **One base for everything.** Classifiers, regressors, transformers, anomaly and drift detectors all inherit from `dense_armor.roles`. An estimator for a robot is also an estimator an LLM can call as a tool.
 
-### `Armatura`
+<details>
+<summary>What is inside</summary>
 
-Filters 1D signal streams such as:
+**Thirty families** under `dense_armor/utility/`: linear models, naive Bayes, k-NN, incremental trees and forests, ensembles, factorization machines, recommenders, bandits, multiclass and multi-output; the full neural stack (dense, convolution, RNN/GRU/LSTM, multi-head attention, transformer blocks, plus `mlp`, `resnet_mlp`, `cnn`, `recurrent_net`, `transformer_encoder`); streaming statistics and sketches; CUSUM, Page-Hinkley, ADWIN, KSWIN, BOCPD; fourteen anomaly detectors; twenty online metrics; online vision; kinematic control and CBF filters.
 
-* loss curves;
-* sensor telemetry;
-* numerical monitoring streams.
+**The protection layer** (`protect/`): `Armatura` (a Phi_AB coherence trigger on 1D signal streams) and `Orca` (an adaptive stabilizer with a Collatz-based damping gate). Thresholds adapt with Jensen-Shannon divergence on the local window. Adversarial robustness is measured against the same engine the system uses, not a separate benchmark; weak cases are reported, not hidden.
 
-It uses a binary Phi_AB coherence trigger connected to the healing mechanism developed in Dense-Evolution.
+**Optional bridges**, installed as extras: `[river]`, `[llm]`, `[quantum]`, `[vision]`, `[drone]`, `[ros]`, `[finance-stream]`, `[data]`, `[audio]`, `[mcp]`.
 
-### `Orca`
+**Documentation:** 35 sections on the site, including `docs/drones/` (13 pages), `docs/finance/` (17 pages), `docs/shields/` (5 pages) and `docs/compare/` where each batch class of the machine-learning task is compared, on the same data and metric, with its online counterpart.
 
-Wraps an entire model with:
+</details>
 
-* an adaptive stabilizer;
-* a Collatz-based damping gate;
-* protection applied around inference.
+**Concepts:** `online learning` · `one sample at a time` · `control-loop budget` · `JAX/XLA` · `finite-difference gradient checks` · `CUSUM` · `ADWIN` · `BOCPD` · `prequential evaluation` · `Jensen-Shannon adaptive threshold`
 
-The statistical detection layer combines four classical anomaly-detection approaches:
-
-* **Chauvenet's criterion (1863)**
-* **Tukey's fences**
-* **Hampel filter**
-* **iterative sigma-clipping**
-
-Their outputs are combined through a Lagrange-multiplier **BLUE** estimator.
-
-The decision threshold is then adapted using **Jensen-Shannon divergence** between local and reference windows.
-
-### Adversarial validation
-
-Robustness is measured against the same engine used by the system rather than relying only on a separate benchmark harness.
-
-The project investigates attacks including:
-
-* PGD;
-* BIM;
-* MI-FGSM;
-* affine attacks;
-* elastic attacks;
-* Carlini-Wagner;
-* DeepFool;
-* Fourier-domain attacks.
-
-Weak cases are investigated alongside successful defenses rather than being hidden.
-
-For example, the reported results include a weaker C&W L∞ case and Fourier-domain results above 99.78%.
-
-**Concepts:**
-`Chauvenet's Criterion` • `Tukey's Fences` • `Hampel Filter` • `Lagrange-Multiplier BLUE` • `Jensen-Shannon Adaptive Thresholding`
-
-[![PyPI](https://img.shields.io/badge/pypi-dense--armor-3775A9?style=flat-square\&logo=pypi\&logoColor=white)](https://pypi.org/project/dense-armor/)
+[![PyPI](https://img.shields.io/badge/pypi-dense--armor-3775A9?style=flat-square&logo=pypi&logoColor=white)](https://pypi.org/project/dense-armor/)
 [![tests](https://github.com/tatopenn-cell/Dense-Armor/actions/workflows/tests.yml/badge.svg)](https://github.com/tatopenn-cell/Dense-Armor/actions/workflows/tests.yml)
 [![codecov](https://codecov.io/gh/tatopenn-cell/Dense-Armor/branch/master/graph/badge.svg)](https://codecov.io/gh/tatopenn-cell/Dense-Armor)
 [![Docs](https://img.shields.io/badge/docs-tatopenn--cell.github.io-00e5ff?style=flat-square)](https://tatopenn-cell.github.io/Dense-Armor/)
-
 ---
 
 # 🧬 Computational Biology
