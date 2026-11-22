@@ -69,7 +69,7 @@ My work sits at the intersection of:
 
 The goal is not simply to write experimental code, but to turn mathematical and scientific ideas into **tested, reproducible and maintainable software**.
 
-I am the author of 2 Python Open_Source Library and more project:
+I am the author of two open-source Python libraries and several research systems:
 [`dense-evolution`](https://pypi.org/project/dense-evolution/), a JAX/XLA statevector simulator for NISQ circuits, VQE and QML;
 [`dense-armor`](https://github.com/tatopenn-cell/Dense-Armor), low-level primitives for real-time signal processing, physical sensor protection, and continuous learning. Run in microseconds on raw streams across online, deep, and batch ML—with native guards for robotics, audio, vision, and tamper-evident finance;
 [`Dense-Evolution-Discovery`](https://github.com/tatopenn-cell/Dense-Evolution-Discovery), the research lab where every claim is a script run and checked before it is written up;
@@ -361,8 +361,8 @@ The projects are intended to demonstrate not only research ideas, but the abilit
 
 | Project | Package | CI | Tests | Documentation | Research Artifact |
 | --- | --- | --- | --- | --- | --- |
-| **Dense-Evolution** | ✅ PyPI 8.3.2 | ✅ | ✅ | ✅ | ✅ [DOI](https://doi.org/10.5281/zenodo.21855643) |
-| **Dense-Armor** | ✅ PyPI 1.1.33 | ✅ | ✅ | ✅ | ✅ [DOI](https://doi.org/10.5281/zenodo.23534981) |
+| **Dense-Evolution** | ✅| ✅ | ✅ | ✅ | ✅ [DOI](https://doi.org/10.5281/zenodo.21855643) |
+| **Dense-Armor** | ✅ | ✅ | ✅ | ✅ | ✅ [DOI](https://doi.org/10.5281/zenodo.23534981) |
 | **Dense-Evolution-Discovery** | 🔬 Research repo | ✅ | 🔬 | 🔬 | ✅ [DOI](https://doi.org/10.5281/zenodo.21855620) |
 | **local-quantum-rag** | 🔬 CLI + FastAPI server | ✅ | 🔬 | 🔬 | ✅ [DOI](https://doi.org/10.5281/zenodo.22914813) |
 
