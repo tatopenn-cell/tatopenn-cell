@@ -168,9 +168,10 @@ Quantum Phase Transitions & Order Parameters • Molecular VQE & Potential Energ
 ## ⚛️ Quantum Simulation & Chemistry
 
 
-<p align="center">
-  <img src="docs/assets/banner.png" alt="Dense Evolution — NISQ quantum simulation toolkit, JAX-native" width="900">
-</p>
+
+<img width="1800" height="400" alt="image" src="https://github.com/user-attachments/assets/e0155adb-10b2-43d2-b98e-f184a5e7c6bb" />
+
+
 
 
 
