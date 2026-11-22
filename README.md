@@ -215,28 +215,35 @@ https://github.com/user-attachments/assets/bcab87a1-9cc6-4e9e-818e-665a7c028c73
 
 ---
 
-### 🌀 [Dense-Evolution-Discovery](https://github.com/tatopenn-cell/Dense-Evolution-Discovery)
+<p align="center">
+<img width="1800" height="400" alt="image" src="https://github.com/user-attachments/assets/cb459665-fd18-4d1d-ad48-5e930df40839" />
+</p>
 
-The research and experimental layer built on top of Dense-Evolution.
+# 🔬 Dense Evolution Discovery — Quantum Simulation Experiments and Robustness Studies
 
-It contains **documented computational experiments**, with results re-measured when changes to the underlying simulator or noise model could affect previous conclusions.
-
-The goal is to keep the experimental process reproducible rather than treating research results as static numbers. Every claim is a script, run and checked before it is written up, with the negative results kept alongside the positive ones.
-
-Current experiments include:
-
-* **MPS GPU Optimization** — the matrix-product-state simulator backend, made faster on GPU (2.16×, real API, real hardware), with the three real bugs found along the way;
-* **Dense-Armor: Robot Safety Monitoring** — drift/fault detection and safety filtering validated on real IMU, Lidar, and robot-arm (LeRobot) data;
-* **Dense-Armor: Security Telemetry & AI Input Shield** — real MITRE ATT&CK APT29 attack detection on genuine Sysmon telemetry, plus Orca protecting a real scikit-learn model from adversarial input corruption;
-* **Quantum Simulation & Physics** — TFIM phase transitions, VQE, ZNE, tight-binding materials, and a critical replication of the traversable-wormhole teleportation protocol;
-* **Diagnostics & Healing** — density-matrix noise diagnostics (Rényi divergence, magic entropy) and vector-healing bug fixes shipped back into Dense-Evolution;
-* **Dynamic Vacuum Pressure Theory** — a `cosh`-shaped vacuum regularization derived from three independent directions, checked against real EHT/LIGO/NICER data, with a `dense_evolution`-verified Z₂ symmetry linking `cosh`, the Bell state and Taoist duality.
-
-**Concepts:**
-`Parameter-Shift Rule` • `Born-Rule Kraus Sampling` • `Statistical Re-Verification` • `Negative Controls`
-
-[![CI](https://github.com/tatopenn-cell/Dense-Evolution-Discovery/actions/workflows/ci.yml/badge.svg)](https://github.com/tatopenn-cell/Dense-Evolution-Discovery/actions/workflows/ci.yml)
+[![Cross-Validation CI](https://github.com/tatopenn-cell/Dense-Evolution-Discovery/actions/workflows/ci.yml/badge.svg)](https://github.com/tatopenn-cell/Dense-Evolution-Discovery/actions/workflows/ci.yml)
+[![Docs](https://img.shields.io/badge/docs-tatopenn--cell.github.io-00e5ff?style=flat-square)](https://tatopenn-cell.github.io/Dense-Evolution-Discovery/)
+[![Dense Evolution](https://img.shields.io/pypi/v/dense-evolution?style=flat-square&color=00e5ff&label=dense-evolution)](https://pypi.org/project/dense-evolution/)
+[![Python](https://img.shields.io/badge/Python-3.9+-blue?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+[![JAX](https://img.shields.io/badge/Backend-JAX_XLA-f9ab00?style=flat-square&logo=google&logoColor=white)](https://github.com/google/jax)
+[![Latest Release](https://img.shields.io/github/v/release/tatopenn-cell/Dense-Evolution-Discovery?style=flat-square&color=blueviolet)](https://github.com/tatopenn-cell/Dense-Evolution-Discovery/releases)
+[![Last Commit](https://img.shields.io/github/last-commit/tatopenn-cell/Dense-Evolution-Discovery?style=flat-square)](https://github.com/tatopenn-cell/Dense-Evolution-Discovery/commits/main)
+[![Issues](https://img.shields.io/github/issues/tatopenn-cell/Dense-Evolution-Discovery?style=flat-square)](https://github.com/tatopenn-cell/Dense-Evolution-Discovery/issues)
+[![Stars](https://img.shields.io/github/stars/tatopenn-cell/Dense-Evolution-Discovery?style=flat-square&color=yellow)](https://github.com/tatopenn-cell/Dense-Evolution-Discovery/stargazers)
 [![DOI](https://zenodo.org/badge/1258407155.svg)](https://doi.org/10.5281/zenodo.21855620)
+
+This is the research lab for [Dense Evolution](https://pypi.org/project/dense-evolution/) — every claim below is a real script, run and checked before it was written up, with negative results kept in alongside the positive ones.
+
+📖 **[Full documentation, every experiment, every image →](https://tatopenn-cell.github.io/Dense-Evolution-Discovery/)**
+
+## Sections
+
+- **[MPS GPU Optimization](https://tatopenn-cell.github.io/Dense-Evolution-Discovery/mps_gpu_optimization/)** — the matrix-product-state simulator backend, made faster on GPU (2.16x, real API, real hardware), with the three real bugs found along the way.
+- **[Dense-Armor: Robot Safety Monitoring](https://tatopenn-cell.github.io/Dense-Evolution-Discovery/live_safety_loop/)** — drift/fault detection and safety filtering validated on real IMU, Lidar, and robot-arm (LeRobot) data.
+- **[Dense-Armor: Security Telemetry & AI Input Shield](https://tatopenn-cell.github.io/Dense-Evolution-Discovery/apt29_dense_armor_security/)** — real MITRE ATT&CK APT29 attack detection on genuine Sysmon telemetry, plus Orca protecting a real scikit-learn model from adversarial input corruption.
+- **[Dense-Evolution: Quantum Simulation & Physics](https://tatopenn-cell.github.io/Dense-Evolution-Discovery/#scientific-discoveries-empirical-evidence)** — TFIM phase transitions, VQE, ZNE, tight-binding materials, and a critical replication of the traversable-wormhole teleportation protocol.
+- **[Diagnostics & Healing](https://tatopenn-cell.github.io/Dense-Evolution-Discovery/sandwiched_renyi_density_matrix/)** — density-matrix noise diagnostics (Rényi divergence, magic entropy) and vector-healing bug fixes shipped back into Dense-Evolution.
+- **[Dynamic Vacuum Pressure Theory](https://tatopenn-cell.github.io/Dense-Evolution-Discovery/dynamic_vacuum_pressure_theory/)** — Salvatore Pennacchio's own theoretical-physics paper, published here as its primary citable record: a `cosh`-shaped vacuum regularization derived from three independent directions, checked against real EHT/LIGO/NICER data, with a `dense_evolution`-verified Z₂ symmetry linking `cosh`, the Bell state, and Taoist duality.
 
 ---
 <p align="center">
