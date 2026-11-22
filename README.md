@@ -4,7 +4,8 @@
 
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&pause=1000&center=true&vCenter=true&width=900&lines=Software+Engineer+%7C+AI+%26+Scientific+Computing;JAX+XLA+Systems+Engineer;Quantum+Simulation+%26+VQE;AI+Runtime+Robustness;Bio-Computational+Pipelines)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&pause=1000&center=true&vCenter=true&width=900&lines=JAX%2FXLA+Systems+%26+Quantum+Simulation+(Dense-Evolution);Online+Learning+%26+Deep+Learning+(Dense-Armor);Local+Hybrid+RAG+%26+Verified+Research+Pipelines;Bio-Computational+Optimization+%26+Control+Loops
+)](https://git.io/typing-svg)
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/salvatore-pennacchio-090924413/)
 [![Email](https://img.shields.io/badge/Email-Reach_Out-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:tatopenn@gmail.com)
