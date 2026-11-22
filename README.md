@@ -58,13 +58,14 @@ I build software where ideas move through the complete engineering cycle:
 
 My work sits at the intersection of:
 
-- 🧑‍💻 **Software Engineering**
-- 🤖 **AI-assisted development**
-- ⚛️ **Quantum simulation**
-- 🧮 **Scientific computing**
-- 🛡️ **AI runtime robustness**
-- 📈 **Online machine learning**
-- 🧬 **Computational biology**
+- **JAX/XLA Systems Engineering** — high-performance scientific computing, compensated floating-point arithmetic, and hardware-accelerated simulation
+- **Quantum Simulation & Error Mitigation** — statevector/MPS engines, VQE, ZNE, and NISQ circuit workflows (`Dense-Evolution`)
+- **Online Learning & Runtime Shields** — single-sample streaming ML, drift/anomaly detection, and real-time safety guards (`Dense-Armor`)
+- **Neuro-Symbolic Ontologies & Causal Graphs** — online graph topology learning (`AdaCGP`), spectral wavelets, root-cause analysis, and hash-chained execution provenance
+- **Real-Time Audio & Vision DSP** — differentiable acoustic filters, phase vocoders, optical flow, and streaming video/sensor stabilization (`D-Avatar`)
+- **Quantitative Finance & Operational Risk** — SEC Rule 15c3-5 pre-trade controls, tamper-evident decision logs, and streaming time-series models
+- **Verifiable AI & Retrieval Pipelines** — local hybrid RAG and reproducible, script-grounded research workflows (`local-quantum-rag`)
+
 
 The goal is not simply to write experimental code, but to turn mathematical and scientific ideas into **tested, reproducible and maintainable software**.
 
