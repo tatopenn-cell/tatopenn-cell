@@ -11,7 +11,38 @@
 [![Email](https://img.shields.io/badge/Email-Reach_Out-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:tatopenn@gmail.com)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/tatopenn-cell)
 [![Docs](https://img.shields.io/badge/Docs-Dense--Evolution-00e5ff?style=for-the-badge&logo=materialformkdocs&logoColor=white)](https://tatopenn-cell.github.io/Dense-Evolution/)
-[![PyPI](https://img.shields.io/badge/PyPI-dense--evolution-3775A9?style=for-the-badge&logo=pypi&logoColor=white)](https://pypi.org/project/dense-evolution/)
+<p align="center">
+  <img alt="tests" src="https://github.com/tatopenn-cell/Dense-Armor/actions/workflows/tests.yml/badge.svg">
+  <a href="https://codecov.io/gh/tatopenn-cell/Dense-Armor"><img alt="codecov" src="https://codecov.io/gh/tatopenn-cell/Dense-Armor/branch/master/graph/badge.svg"></a>
+  <a href="https://pypi.org/project/dense-armor"><img alt="pypi" src="https://img.shields.io/pypi/v/dense-armor.svg"></a>
+  <a href="https://doi.org/10.5281/zenodo.24352804"><img alt="DOI" src="https://zenodo.org/badge/DOI/10.5281/zenodo.24352804.svg"></a>
+  <img alt="license" src="https://img.shields.io/badge/license-AGPL_3.0-blue.svg">
+  <img alt="python" src="https://img.shields.io/badge/python-3.10%2B-blue.svg">
+  <img alt="vision" src="https://img.shields.io/badge/vision-native-9cf.svg">
+  <img alt="robot control" src="https://img.shields.io/badge/robot%20control-rate%20limit%20%2B%20CBF-9cf.svg">
+  <img alt="backend" src="https://img.shields.io/badge/backend-JAX-orange.svg">
+  <img alt="nan" src="https://img.shields.io/badge/NaN--safe-yes-brightgreen.svg">
+  <a href="https://tatopenn-cell.github.io/Dense-Armor/"><img alt="docs" src="https://img.shields.io/badge/docs-tatopenn--cell.github.io-00e5ff?style=flat-square"></a>
+  <a href="https://pypistats.org/packages/dense-armor"><img alt="PyPI - Downloads" src="https://shields.io/pypi/dm/dense-armor.svg"></a>
+<p align="center">
+  <img src="docs/assets/favicon.svg" width="32" alt=""><br>
+ 
+  [![CI](https://github.com/tatopenn-cell/Dense-Evolution/actions/workflows/ci.yml/badge.svg)](https://github.com/tatopenn-cell/Dense-Evolution/actions/workflows/ci.yml)
+[![Docs](https://img.shields.io/badge/docs-tatopenn--cell.github.io-00e5ff?style=flat-square)](https://tatopenn-cell.github.io/Dense-Evolution/)
+[![codecov](https://codecov.io/gh/tatopenn-cell/Dense-Evolution/branch/main/graph/badge.svg)](https://codecov.io/gh/tatopenn-cell/Dense-Evolution)
+[![PyPI](https://img.shields.io/pypi/v/dense-evolution?style=flat-square&color=00e5ff)](https://pypi.org/project/dense-evolution/)
+[![PyPI Downloads](https://img.shields.io/pypi/dm/dense-evolution?style=flat-square&color=00e5ff)](https://pypi.org/project/dense-evolution/)
+[![Python](https://img.shields.io/badge/Python-3.9+-blue?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+[![License](https://img.shields.io/badge/License-AGPL_3.0-blue?style=flat-square)](LICENSE)
+[![Build](https://img.shields.io/badge/Build-Passing-00ff9d?style=flat-square)](https://github.com/tatopenn-cell/Dense-Evolution/actions)
+[![Cross-Validation CI](https://github.com/tatopenn-cell/Dense-Evolution-Discovery/actions/workflows/ci.yml/badge.svg)](https://github.com/tatopenn-cell/Dense-Evolution-Discovery/actions/workflows/ci.yml)
+[![Latest Release](https://img.shields.io/github/v/release/tatopenn-cell/Dense-Evolution?style=flat-square&color=blueviolet)](https://github.com/tatopenn-cell/Dense-Evolution/releases)
+[![Last Commit](https://img.shields.io/github/last-commit/tatopenn-cell/Dense-Evolution?style=flat-square)](https://github.com/tatopenn-cell/Dense-Evolution/commits/main)
+[![Issues](https://img.shields.io/github/issues/tatopenn-cell/Dense-Evolution?style=flat-square)](https://github.com/tatopenn-cell/Dense-Evolution/issues)
+[![Stars](https://img.shields.io/github/stars/tatopenn-cell/Dense-Evolution?style=flat-square&color=yellow)](https://github.com/tatopenn-cell/Dense-Evolution/stargazers)
+[![JAX](https://img.shields.io/badge/Backend-JAX_XLA-f9ab00?style=flat-square&logo=google&logoColor=white)](https://github.com/google/jax)
+[![DOI](https://zenodo.org/badge/1247011090.svg)](https://doi.org/10.5281/zenodo.21855643)
+[![Featured in Awesome Quantum Software](https://img.shields.io/badge/Featured%20in-Awesome%20Quantum%20Software-blueviolet?style=flat-square)](https://github.com/qosf/awesome-quantum-software)
 
 </div>
 
