@@ -69,7 +69,7 @@ My work sits at the intersection of:
 
 The goal is not simply to write experimental code, but to turn mathematical and scientific ideas into **tested, reproducible and maintainable software**.
 
-I am the author of :
+I am the author of 2 Python Open_Source Library and more project:
 [`dense-evolution`](https://pypi.org/project/dense-evolution/), a JAX/XLA statevector simulator for NISQ circuits, VQE and QML;
 [`dense-armor`](https://github.com/tatopenn-cell/Dense-Armor), low-level primitives for real-time signal processing, physical sensor protection, and continuous learning. Run in microseconds on raw streams across online, deep, and batch ML—with native guards for robotics, audio, vision, and tamper-evident finance;
 [`Dense-Evolution-Discovery`](https://github.com/tatopenn-cell/Dense-Evolution-Discovery), the research lab where every claim is a script run and checked before it is written up;
