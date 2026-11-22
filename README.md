@@ -167,31 +167,50 @@ Quantum Phase Transitions & Order Parameters • Molecular VQE & Potential Energ
 
 ## ⚛️ Quantum Simulation & Chemistry
 
-### 🧮 [dense-evolution](https://github.com/tatopenn-cell/Dense-Evolution)
 
-A **JAX/XLA statevector simulator** for NISQ circuits, VQE and QML.
+<p align="center">
+  <img src="docs/assets/banner.png" alt="Dense Evolution — NISQ quantum simulation toolkit, JAX-native" width="900">
+</p>
 
-The project combines high-performance numerical computing with quantum chemistry functionality, including:
 
-* stride-sliced kernel fusion;
-* JAX/XLA execution;
-* a native Hartree-Fock engine;
-* **Obara-Saika recursion**;
-* real molecular Hamiltonians;
-* Jordan-Wigner mapping;
-* Zero-Noise Extrapolation;
-* Richardson extrapolation;
-* Composer web UI;
-* MCP server for agent-driven control.
 
-The project is distributed as a real Python package and includes public documentation, CI and research artifacts.
+<!-- mcp-name: io.github.tatopenn-cell/dense-evolution -->
+**A high-performance quantum simulation toolkit
+Statevector/MPS engines with compilation, noise, VQE, QEC, chemistry, and agent-native tooling.**
 
-**Concepts:**
-`Obara-Saika Recursion` • `Jordan-Wigner Mapping` • `Richardson Extrapolation` • `Kernel Fusion` • `JAX/XLA`
 
-[![PyPI](https://img.shields.io/pypi/v/dense-evolution?style=flat-square\&color=00e5ff)](https://pypi.org/project/dense-evolution/)
+  <img src="docs/assets/favicon.svg" width="32" alt=""><br>
+  <b>Download the Dense Evolution Dashboard (Streamlit)</b><br>
+  <a href="https://tatopenn-cell.github.io/Dense-Evolution/assets/installer/install-dashboard.bat">Windows (.bat)</a> &middot;
+  <a href="https://tatopenn-cell.github.io/Dense-Evolution/assets/installer/install-dashboard.sh">macOS / Linux (.sh)</a>
+</p>
+
 [![CI](https://github.com/tatopenn-cell/Dense-Evolution/actions/workflows/ci.yml/badge.svg)](https://github.com/tatopenn-cell/Dense-Evolution/actions/workflows/ci.yml)
+[![Docs](https://img.shields.io/badge/docs-tatopenn--cell.github.io-00e5ff?style=flat-square)](https://tatopenn-cell.github.io/Dense-Evolution/)
+[![codecov](https://codecov.io/gh/tatopenn-cell/Dense-Evolution/branch/main/graph/badge.svg)](https://codecov.io/gh/tatopenn-cell/Dense-Evolution)
+[![PyPI](https://img.shields.io/pypi/v/dense-evolution?style=flat-square&color=00e5ff)](https://pypi.org/project/dense-evolution/)
+[![PyPI Downloads](https://img.shields.io/pypi/dm/dense-evolution?style=flat-square&color=00e5ff)](https://pypi.org/project/dense-evolution/)
+[![Python](https://img.shields.io/badge/Python-3.9+-blue?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+[![License](https://img.shields.io/badge/License-AGPL_3.0-blue?style=flat-square)](LICENSE)
+[![Build](https://img.shields.io/badge/Build-Passing-00ff9d?style=flat-square)](https://github.com/tatopenn-cell/Dense-Evolution/actions)
+[![Cross-Validation CI](https://github.com/tatopenn-cell/Dense-Evolution-Discovery/actions/workflows/ci.yml/badge.svg)](https://github.com/tatopenn-cell/Dense-Evolution-Discovery/actions/workflows/ci.yml)
+[![Latest Release](https://img.shields.io/github/v/release/tatopenn-cell/Dense-Evolution?style=flat-square&color=blueviolet)](https://github.com/tatopenn-cell/Dense-Evolution/releases)
+[![Last Commit](https://img.shields.io/github/last-commit/tatopenn-cell/Dense-Evolution?style=flat-square)](https://github.com/tatopenn-cell/Dense-Evolution/commits/main)
+[![Issues](https://img.shields.io/github/issues/tatopenn-cell/Dense-Evolution?style=flat-square)](https://github.com/tatopenn-cell/Dense-Evolution/issues)
+[![Stars](https://img.shields.io/github/stars/tatopenn-cell/Dense-Evolution?style=flat-square&color=yellow)](https://github.com/tatopenn-cell/Dense-Evolution/stargazers)
+[![JAX](https://img.shields.io/badge/Backend-JAX_XLA-f9ab00?style=flat-square&logo=google&logoColor=white)](https://github.com/google/jax)
 [![DOI](https://zenodo.org/badge/1247011090.svg)](https://doi.org/10.5281/zenodo.21855643)
+[![Featured in Awesome Quantum Software](https://img.shields.io/badge/Featured%20in-Awesome%20Quantum%20Software-blueviolet?style=flat-square)](https://github.com/qosf/awesome-quantum-software)
+
+---
+
+📖 **[Full documentation, API reference, and worked examples →](https://tatopenn-cell.github.io/Dense-Evolution/)**
+
+A local Streamlit dashboard and web-based Composer editor are also included — see [Composer & MCP Server](#-composer--mcp-server) below.
+
+
+
+https://github.com/user-attachments/assets/bcab87a1-9cc6-4e9e-818e-665a7c028c73
 
 ---
 
@@ -219,35 +238,37 @@ Current experiments include:
 [![DOI](https://zenodo.org/badge/1258407155.svg)](https://doi.org/10.5281/zenodo.21855620)
 
 ---
-### 🐙 [Dense-Armor](https://github.com/tatopenn-cell/Dense-Armor)
+<p align="center">
+<img width="1800" height="400" alt="banner_nuovo" src="https://github.com/user-attachments/assets/9557ee09-fc5d-4ae9-8e1a-684017013f6e" />
+</p>
 
-**An online-learning library for robots and LLMs. One sample at a time, inside a control-loop budget, with a runtime protection layer.**
+<p align="center">
+  <img alt="tests" src="https://github.com/tatopenn-cell/Dense-Armor/actions/workflows/tests.yml/badge.svg">
+  <a href="https://codecov.io/gh/tatopenn-cell/Dense-Armor"><img alt="codecov" src="https://codecov.io/gh/tatopenn-cell/Dense-Armor/branch/master/graph/badge.svg"></a>
+  <a href="https://pypi.org/project/dense-armor"><img alt="pypi" src="https://img.shields.io/pypi/v/dense-armor.svg"></a>
+  <a href="https://doi.org/10.5281/zenodo.24352804"><img alt="DOI" src="https://zenodo.org/badge/DOI/10.5281/zenodo.24352804.svg"></a>
+  <img alt="license" src="https://img.shields.io/badge/license-AGPL_3.0-blue.svg">
+  <img alt="python" src="https://img.shields.io/badge/python-3.10%2B-blue.svg">
+  <img alt="vision" src="https://img.shields.io/badge/vision-native-9cf.svg">
+  <img alt="robot control" src="https://img.shields.io/badge/robot%20control-rate%20limit%20%2B%20CBF-9cf.svg">
+  <img alt="backend" src="https://img.shields.io/badge/backend-JAX-orange.svg">
+  <img alt="nan" src="https://img.shields.io/badge/NaN--safe-yes-brightgreen.svg">
+  <a href="https://tatopenn-cell.github.io/Dense-Armor/"><img alt="docs" src="https://img.shields.io/badge/docs-tatopenn--cell.github.io-00e5ff?style=flat-square"></a>
+  <a href="https://pypistats.org/packages/dense-armor"><img alt="PyPI - Downloads" src="https://shields.io/pypi/dm/dense-armor.svg"></a>
+</p>
 
-- **Learns one sample at a time.** Every estimator has `learn_one`, `predict_one`, `score_one`. No retraining, no batch.
-- **Fits a control loop.** `budget_s` and `RealtimePipeline` refuse an estimator that does not fit the period.
-- **Protects itself while it learns.** `Protected` and `SafeEstimator` wrap any model; a drift detector, an anomaly detector or the `Orca` runtime shield can flag and fall back.
-- **One base for everything.** Classifiers, regressors, transformers, anomaly and drift detectors all inherit from `dense_armor.roles`. An estimator for a robot is also an estimator an LLM can call as a tool.
+<h3 align="center">Library of Primitives from__Robot__to__AI__ </h3>
 
-<details>
-<summary>What is inside</summary>
+<p align="center"><strong>Composable, low-level primitives for real-time signal processing, physical sensor protection, and continuous learning. Run in microseconds on raw streams across online, deep, and batch ML—with native guards for robotics, audio, vision, and tamper-evident finance. Built to run inside the loop, and to be defended in front of a reviewer.</strong></p>
 
-**Thirty families** under `dense_armor/utility/`: linear models, naive Bayes, k-NN, incremental trees and forests, ensembles, factorization machines, recommenders, bandits, multiclass and multi-output; the full neural stack (dense, convolution, RNN/GRU/LSTM, multi-head attention, transformer blocks, plus `mlp`, `resnet_mlp`, `cnn`, `recurrent_net`, `transformer_encoder`); streaming statistics and sketches; CUSUM, Page-Hinkley, ADWIN, KSWIN, BOCPD; fourteen anomaly detectors; twenty online metrics; online vision; kinematic control and CBF filters.
 
-**The protection layer** (`protect/`): `Armatura` (a Phi_AB coherence trigger on 1D signal streams) and `Orca` (an adaptive stabilizer with a Collatz-based damping gate). Thresholds adapt with Jensen-Shannon divergence on the local window. Adversarial robustness is measured against the same engine the system uses, not a separate benchmark; weak cases are reported, not hidden.
+<p align="center">📖 <a href="https://tatopenn-cell.github.io/Dense-Armor/"><strong>Full documentation, API reference, quick guide →</strong></a></p>
 
-**Optional bridges**, installed as extras: `[river]`, `[llm]`, `[quantum]`, `[vision]`, `[drone]`, `[ros]`, `[finance-stream]`, `[data]`, `[audio]`, `[mcp]`.
+<p align="center"><a href="https://github.com/tatopenn-cell/Dense-Armor/archive/refs/heads/master.zip"><img alt="Download for Windows" src="https://img.shields.io/badge/Download-for_Windows-0078D4?style=for-the-badge&logo=windows&logoColor=white"></a> <a href="#dashboard-one-command"><img alt="How to run" src="https://img.shields.io/badge/Dashboard-how_to_run-2ea44f?style=for-the-badge&logo=gitbook&logoColor=white"></a></p>
 
-**Documentation:** 35 sections on the site, including `docs/drones/` (13 pages), `docs/finance/` (17 pages), `docs/shields/` (5 pages) and `docs/compare/` where each batch class of the machine-learning task is compared, on the same data and metric, with its online counterpart.
 
-</details>
+Check out [the API](https://tatopenn-cell.github.io/Dense-Armor/api/) for a comprehensive overview.
 
-**Concepts:** `online learning` · `one sample at a time` · `control-loop budget` · `JAX/XLA` · `finite-difference gradient checks` · `CUSUM` · `ADWIN` · `BOCPD` · `prequential evaluation` · `Jensen-Shannon adaptive threshold`
-
-[![PyPI](https://img.shields.io/badge/pypi-dense--armor-3775A9?style=flat-square&logo=pypi&logoColor=white)](https://pypi.org/project/dense-armor/)
-[![tests](https://github.com/tatopenn-cell/Dense-Armor/actions/workflows/tests.yml/badge.svg)](https://github.com/tatopenn-cell/Dense-Armor/actions/workflows/tests.yml)
-[![codecov](https://codecov.io/gh/tatopenn-cell/Dense-Armor/branch/master/graph/badge.svg)](https://codecov.io/gh/tatopenn-cell/Dense-Armor)
-[![Docs](https://img.shields.io/badge/docs-tatopenn--cell.github.io-00e5ff?style=flat-square)](https://tatopenn-cell.github.io/Dense-Armor/)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23534981.svg)](https://doi.org/10.5281/zenodo.23534981)
 
 ---
 
